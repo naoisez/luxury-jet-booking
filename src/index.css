@@ -8,53 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 20% 6%;
-    --foreground: 40 10% 96%;
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
 
-    --card: 220 18% 8%;
-    --card-foreground: 40 10% 96%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 220 18% 8%;
-    --popover-foreground: 40 10% 96%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 220 25% 12%;
-    --primary-foreground: 40 10% 96%;
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 45 90% 58%;
-    --secondary-foreground: 220 20% 10%;
+    --secondary: 35 65% 65%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 40 5% 65%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 45 85% 55%;
-    --accent-foreground: 220 20% 10%;
+    --accent: 35 65% 65%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 40 10% 96%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 45 85% 55%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 35 65% 65%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Luxury theme colors */
-    --navy-dark: 220 25% 10%;
-    --navy-medium: 220 20% 15%;
-    --gold: 45 90% 58%;
-    --gold-muted: 45 70% 50%;
-    --white-pure: 0 0% 100%;
+    /* ElioJet luxury theme colors */
+    --black-rich: 0 0% 7%;
+    --black-deep: 0 0% 4%;
+    --gold-warm: 35 65% 65%;
+    --gold-bronze: 30 55% 55%;
+    --white-pure: 0 0% 98%;
+    --gray-soft: 0 0% 85%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 25% 8%) 0%, hsl(220 20% 12%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(45 90% 58%) 0%, hsl(40 85% 52%) 100%);
+    --gradient-overlay: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    --gradient-gold: linear-gradient(135deg, hsl(35 65% 65%) 0%, hsl(30 55% 55%) 100%);
     
     /* Shadows */
-    --shadow-luxury: 0 20px 60px -15px hsl(220 25% 5% / 0.5);
-    --shadow-gold-glow: 0 0 30px hsl(45 90% 58% / 0.15);
+    --shadow-luxury: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    --shadow-gold-glow: 0 0 40px rgba(201, 164, 121, 0.2);
     
     /* Transitions */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -65,13 +66,15 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
     font-feature-settings: "kern" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    font-family: 'Cormorant Garamond', serif;
+    @apply font-light tracking-wide;
   }
 }
 
@@ -81,6 +84,18 @@ All colors MUST be HSL.
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--gold-muted))] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[hsl(var(--gold-warm))] to-[hsl(var(--gold-bronze))] bg-clip-text text-transparent;
+  }
+  
+  .font-serif {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .font-sans {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .letter-spacing-luxury {
+    letter-spacing: 0.15em;
   }
 }

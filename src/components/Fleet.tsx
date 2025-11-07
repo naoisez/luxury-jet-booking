@@ -27,55 +27,55 @@ const Fleet = () => {
   ];
 
   return (
-    <section id="fleet" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Our <span className="gradient-text">Exclusive Fleet</span>
+    <section id="fleet" className="py-32 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-serif font-light mb-6 tracking-wide">
+            Our <span className="gradient-text">Fleet</span>
           </h2>
-          <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
+          <p className="text-foreground/70 font-sans font-light text-lg max-w-2xl mx-auto leading-relaxed">
             Choose from our selection of meticulously maintained aircraft, 
             each offering the ultimate in comfort and performance
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {jets.map((jet, index) => (
-            <Card key={index} className="bg-card border-border hover:border-accent/50 transition-all duration-300 hover:shadow-[var(--shadow-gold-glow)]">
-              <CardContent className="p-8">
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold mb-2">{jet.name}</h3>
-                  <p className="text-foreground/60">{jet.description}</p>
+            <Card key={index} className="bg-card border-border/50 hover:border-accent/30 transition-all duration-500 hover:shadow-[var(--shadow-gold-glow)] group">
+              <CardContent className="p-10">
+                <div className="mb-8">
+                  <h3 className="text-3xl font-serif font-light mb-3 tracking-wide">{jet.name}</h3>
+                  <p className="text-foreground/60 font-sans font-light text-sm">{jet.description}</p>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                <div className="space-y-5">
+                  <div className="flex items-center gap-4">
+                    <div className="w-11 h-11 rounded-full bg-accent/5 flex items-center justify-center group-hover:bg-accent/10 transition-colors duration-300">
                       <Users className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <div className="text-sm text-foreground/60">Capacity</div>
-                      <div className="font-semibold">{jet.passengers} passengers</div>
+                      <div className="text-xs font-sans text-foreground/50 uppercase tracking-wider mb-1">Capacity</div>
+                      <div className="font-sans font-light">{jet.passengers} passengers</div>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                  <div className="flex items-center gap-4">
+                    <div className="w-11 h-11 rounded-full bg-accent/5 flex items-center justify-center group-hover:bg-accent/10 transition-colors duration-300">
                       <MapPin className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <div className="text-sm text-foreground/60">Range</div>
-                      <div className="font-semibold">{jet.range}</div>
+                      <div className="text-xs font-sans text-foreground/50 uppercase tracking-wider mb-1">Range</div>
+                      <div className="font-sans font-light">{jet.range}</div>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                  <div className="flex items-center gap-4">
+                    <div className="w-11 h-11 rounded-full bg-accent/5 flex items-center justify-center group-hover:bg-accent/10 transition-colors duration-300">
                       <Gauge className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <div className="text-sm text-foreground/60">Cruise Speed</div>
-                      <div className="font-semibold">{jet.speed}</div>
+                      <div className="text-xs font-sans text-foreground/50 uppercase tracking-wider mb-1">Cruise Speed</div>
+                      <div className="font-sans font-light">{jet.speed}</div>
                     </div>
                   </div>
                 </div>

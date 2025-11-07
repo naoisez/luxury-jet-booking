@@ -72,19 +72,19 @@ const BookingForm = () => {
   };
 
   return (
-    <section id="booking" className="py-24 bg-card">
-      <div className="container mx-auto px-4">
+    <section id="booking" className="py-32 bg-card/30">
+      <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Book Your <span className="gradient-text">Private Flight</span>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-serif font-light mb-6 tracking-wide">
+              Book Your <span className="gradient-text">Flight</span>
             </h2>
-            <p className="text-foreground/70 text-lg">
+            <p className="text-foreground/70 font-sans font-light text-lg leading-relaxed">
               Complete the form below and our team will contact you within 2 hours
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-background border border-border rounded-2xl p-8 shadow-[var(--shadow-luxury)]">
+          <form onSubmit={handleSubmit} className="bg-card border border-border/50 rounded-lg p-10 shadow-[var(--shadow-luxury)]">
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div className="space-y-2">
                 <Label htmlFor="name">Full Name *</Label>
@@ -232,13 +232,13 @@ const BookingForm = () => {
             <Button 
               type="submit" 
               size="lg"
-              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg py-6 shadow-[var(--shadow-gold-glow)]"
+              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-sans text-base font-normal py-7 rounded-full shadow-[var(--shadow-gold-glow)] transition-all duration-500"
             >
-              Submit Booking Request
-              <Send className="ml-2 w-5 h-5" />
+              Submit Request
+              <Send className="ml-2 w-4 h-4" />
             </Button>
 
-            <p className="text-center text-sm text-foreground/60 mt-4">
+            <p className="text-center text-sm font-sans font-light text-foreground/50 mt-6">
               * Required fields. We'll contact you to confirm availability and pricing.
             </p>
           </form>

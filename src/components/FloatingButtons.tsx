@@ -6,10 +6,10 @@ const FloatingButtons = () => {
   const phoneNumber = "+1234567890"; // Replace with actual phone number
 
   return (
-    <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+    <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
       <Button
         size="lg"
-        className="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20BA5A] text-white shadow-lg hover:shadow-xl transition-all duration-300"
+        className="w-16 h-16 rounded-full bg-[#25D366] hover:bg-[#20BA5A] text-white shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-110"
         asChild
       >
         <a
@@ -24,7 +24,7 @@ const FloatingButtons = () => {
 
       <Button
         size="lg"
-        className="w-14 h-14 rounded-full bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all duration-300 shadow-[var(--shadow-gold-glow)]"
+        className="w-16 h-16 rounded-full bg-accent hover:bg-accent/90 text-accent-foreground shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-110 shadow-[var(--shadow-gold-glow)]"
         asChild
       >
         <a href={`tel:${phoneNumber}`} aria-label="Call us">

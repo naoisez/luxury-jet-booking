@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        serif: ['Cormorant Garamond', 'serif'],
+        sans: ['Inter', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,13 +51,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        navy: {
-          dark: "hsl(var(--navy-dark))",
-          medium: "hsl(var(--navy-medium))",
-        },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          muted: "hsl(var(--gold-muted))",
+        luxury: {
+          black: "hsl(var(--black-rich))",
+          deep: "hsl(var(--black-deep))",
+          gold: "hsl(var(--gold-warm))",
+          bronze: "hsl(var(--gold-bronze))",
         },
       },
       borderRadius: {
